@@ -34,6 +34,7 @@
   var running = false;
   var timer = 0;
   var selected = 0;
+  var runTimer;
 
   $("#canvas_b").addClass( "hiddenCanvas" );
   $("#comment_b").addClass( "hiddenCanvas" );
@@ -44,11 +45,11 @@
 
       if (running != true)
       {
-        var runTimer = setInterval(time, 100);
+        runTimer = setInterval(time, 100);
         running = true;
       }
 
-      if (clicks == 1 && timer >= 1 && timer < 12)
+      if (clicks == 1 && timer >= 1 && timer < 3)
       {
         console.log("found quick return" + clicks + " " + timer);
         fadeOut();
@@ -57,6 +58,8 @@
       }
 
       clicks++;
+    } else {
+      clear();
     }
 
 
@@ -65,14 +68,19 @@
       timer++;
       if (timer > 15)
       {
-        clearInterval(runTimer);
-        timer = 0;
-        running = false;
-        clicks = 0;
+        clear();
       }
     }
   });
 
+
+  function clear() {
+    console.log("clear");
+    clearInterval(runTimer);
+    timer = 0;
+    running = false;
+    clicks = 0;
+  }
 
   function fadeOut() {
 

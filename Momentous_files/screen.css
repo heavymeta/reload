@@ -49,6 +49,11 @@ html, body {
 	margin-right: auto;
 }
 
+.canvas img {
+	width: 100%;
+	max-width: 100%;
+}
+
 [contenteditable="true"] { padding: 0px; outline: 0px dashed #fff; }
 
 .canvas #canvas_a {
