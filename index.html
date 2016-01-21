@@ -6,6 +6,7 @@
   <title>Paper</title>
   <link rel="stylesheet" type="text/css" href="./css/screen.css" media="screen">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -19,10 +20,13 @@
       <img id="comment_a" src="./img/comment.jpg">
       <img id="comment_b" src="./img/small_comments.jpg">
       <input type="text" placeholder="Add comment"></input>
-      <img id="annotation_trigger" src="img/annotation.png"></img>
+      <div id="annotation_trigger">
+        <img src="img/annotation.png"></img>
+      </div>
     </div>
     <div class="main">
       <div class="canvas">
+        <div id="annotation_box" draggable="true"v></div>
         <div id="canvas_a" contenteditable="true"></div>
         <div id="canvas_b" contenteditable="true"></div>
       </div>
@@ -31,6 +35,7 @@
   </div>
 
   <script src="js/reset.js"></script>
+  <script src="js/annotation.js"></script>
 
 </body>
 </html>
