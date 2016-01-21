@@ -52,6 +52,7 @@ html, body {
 .canvas img {
 	width: 100%;
 	max-width: 100%;
+	cursor: copy;
 }
 
 [contenteditable="true"] { padding: 0px; outline: 0px dashed #fff; }
@@ -91,6 +92,37 @@ html, body {
 	height: 100vh;
 	margin-top: 114px;
 }
+
+.sidebar input {
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border:solid 1px #E8E7E3;
+	background-color: #FBFBFA;
+	padding-left: 10px;
+	margin-left: 32px;
+	height: 32px;
+	width: 275px;
+	font-size: 10pt;
+	font-weight: 400;
+	color: black;
+
+}
+
+.sidebar #annotation_trigger {
+	margin-top: 9px;
+	margin-left: -25px;
+	position: absolute;
+}
+
+.sidebar input::-webkit-input-placeholder {
+	color: #BAB9B6 !important;
+	font-weight: lighter;
+}
+
+.sidebar input:focus {
+    outline-width: 0;
+}
+
 
 .main,.sidebar {
 	min-height: 100px;
