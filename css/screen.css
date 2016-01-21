@@ -49,12 +49,25 @@ html, body {
 	margin-right: auto;
 }
 
+.canvas #annotation_box {
+	border: 2px solid #C30000;
+	resize: both;
+	background-color: rgba(162,0,0,.11);
+	height: 10em;
+	width: 10em;
+	position: absolute;
+	z-index: 1000;
+	overflow: auto;
+}
+
 .canvas img {
 	width: 100%;
 	max-width: 100%;
 	cursor: copy;
 }
 
+
+[draggable=true] { cursor: move; }
 [contenteditable="true"] { padding: 0px; outline: 0px dashed #fff; }
 
 .canvas #canvas_a {
@@ -109,9 +122,17 @@ html, body {
 }
 
 .sidebar #annotation_trigger {
-	margin-top: 9px;
-	margin-left: -25px;
+	margin-top: -27px;
+	margin-left: 295px;
 	position: absolute;
+	-webkit-animation: pulsate 1s ease-out;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: opacity: 0.0;}
 }
 
 .sidebar input::-webkit-input-placeholder {
