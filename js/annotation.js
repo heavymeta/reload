@@ -9,14 +9,17 @@ $( "#annotation_trigger" ).click(function() {
 });
 
 
-$("#canvas_a img").click(function(e) {
+$("#canvas_a").click(function(e) {
 
+if (annotation_active == true)
+{
   var posX = $(this).position().left,
       posY = $(this).position().top;
   console.log((e.pageX - posX) + ' , ' + (e.pageY - posY));
 
   if (annotation_active = true) {
-    $("#annotation_box").css({top: (e.pageY - posY) + 90, left: (e.pageX - posX) - 50});
+    $("#annotation_box").css({top: (e.pageY - posY) + 90, left: (e.pageX - posX), opacity: 1});
   }
+}
 
 });
